@@ -1,0 +1,51 @@
+extends ../layout
+
+block content
+    h1 分期乐
+    hr
+    if task_list.length
+        table.table.table-bordered
+            tr
+                th 商品名称
+                th 商品描述
+                th 商品价格
+                th 商品原价
+                th 商品图片
+                th 分期价格
+                th 商品规格
+                th 商品颜色
+                th 商品数量
+                th 评价内容
+                th 所属店铺
+                th 自营
+                th cart数量
+                th showorhide
+              
+                th 编辑
+                th 删除
+            each task in task_list
+                tr
+                    td #{task.productname}
+                    td #{task.shangmiaoshu}
+                    td #{task.spjiage}
+                    td #{task.shangpinyuanjia}
+                    td #{task.goodsImg}
+                    td #{task.fenqjge}
+                    td #{task.guige}
+                    td #{task.color}
+                    td #{task.shangpinshuliang}
+                    td #{task.pinjianeirong}
+                    td #{task.suoshudianpu}
+                    td #{task.ziying}
+                    td #{task.qal}
+                    td #{task.showorhide}
+                    td
+                        a.btn.btn-primary(href='/tasks/edit/#{task._id}') 编辑
+                    td
+                        form(method='post',action='/tasks/#{task._id}?_method=DELETE')
+                            button.btn(type='submit') 删除
+    else
+        p 没有任务，真轻松~
+    hr
+    p
+        a(href='/tasks/new') 添加任务

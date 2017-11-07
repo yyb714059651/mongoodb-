@@ -1,0 +1,57 @@
+extends ../layout
+
+block content
+    form(method='post',action='/tasks/#{task._id}?_method=PUT')
+        fieldset
+            legend
+                a(href='/tasks') 任务列表
+                | /修改任务
+        div.clearfix
+            label 修改数据
+            label 商品名称
+            div.input
+                input(name='task',class='form-control',style='width:400px;' value="#{task.productname}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品描述
+                input(name='task1',class='form-control',style='width:400px;' value="#{task.shangmiaoshu}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品价格
+                input(name='task2',class='form-control',style='width:400px;' value="#{task.spjiage}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品原价
+                input(name='task3',class='form-control',style='width:400px;' value="#{task.shangpinyuanjia}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品图片
+                input(name='task4',class='form-control',style='width:400px;' value="#{task.goodsImg}")
+                input(type='hidden',name='_method',value='PUT')
+            label 分期价格
+                input(name='task5',class='form-control',style='width:400px;' value="#{task.fenqjge}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品规格
+                input(name='task6',class='form-control',style='width:400px;' value="#{task.guige}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品颜色
+                input(name='task7',class='form-control',style='width:400px;' value="#{task.color}")
+                input(type='hidden',name='_method',value='PUT')
+            label 商品数量
+                input(name='task8',class='form-control',style='width:400px;' value="#{task.shangpinshuliang}")
+                input(type='hidden',name='_method',value='PUT')
+            label 评价内容
+                input(name='task9',class='form-control',style='width:400px;' value="#{task.pinjianeirong}")
+                input(type='hidden',name='_method',value='PUT')
+            label 所属店铺
+                input(name='task10',class='form-control',style='width:400px;' value="#{task.suoshudianpu}")
+                input(type='hidden',name='_method',value='PUT')
+            label 自营
+                input(name='task11',class='form-control',style='width:400px;' value="#{task.ziying}")
+                input(type='hidden',name='_method',value='PUT')
+            label cart数量
+                input(name='task12',class='form-control',style='width:400px;' value="#{task.qal}")
+                input(type='hidden',name='_method',value='PUT')
+            label showorhide
+                input(name='task13',class='form-control',style='width:400px;' value="#{task.showorhide}")
+                input(type='hidden',name='_method',value='PUT')    
+        div.actions(style='margin-top:20px;')
+            input(type='submit',value='确　定',class='btn btn-primary')
+            span &nbsp;&nbsp;
+            button(type='reset',class='btn') 重　置

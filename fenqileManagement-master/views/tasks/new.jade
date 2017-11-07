@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+    form(method='post',action='/tasks')
+        fieldset
+            legend
+                a(href='/tasks') 任务列表
+                | /添加任务
+        div.clearfix
+                label 商品名称
+                input(name='task',class='form-control',style='width:400px;')
+                label 商品描述
+                    input(name='task1',class='form-control',style='width:400px;')
+                label 商品价格
+                    input(name='task2',class='form-control',style='width:400px;')
+                label 商品原价
+                    input(name='task3',class='form-control',style='width:400px;')
+                label 商品图片
+                    input(name='task4',class='form-control',style='width:400px;')
+                label 分期价格
+                    input(name='task5',class='form-control',style='width:400px;')
+                label 商品规格
+                    input(name='task6',class='form-control',style='width:400px;')
+                label 商品颜色
+                    input(name='task7',class='form-control',style='width:400px;')
+                label 商品数量
+                    input(name='task8',class='form-control',style='width:400px;')
+                label 评价内容
+                    input(name='task9',class='form-control',style='width:400px;')
+                label 所属店铺
+                    input(name='task10',class='form-control',style='width:400px;')        
+                label 是否自营
+                    input(name='task11',class='form-control',style='width:400px;')
+                label cart数量
+                    input(name='task12',class='form-control',style='width:400px;')        
+                label showorhide
+                    input(name='task13',class='form-control',style='width:400px;')
+        div.actions(style='margin-top:20px;')
+            input(type='submit',value='确　定',class='btn btn-primary')
+            span &nbsp;&nbsp;
+            button(type='reset',class='btn') 重　置
